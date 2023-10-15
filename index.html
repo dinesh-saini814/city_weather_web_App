@@ -7,26 +7,24 @@
   <link rel="stylesheet" href="weather-app-style.css">
 </head>
 <body>
-  
+   
   <div class="card">
     <!-- search bar for city -->
     <div class="search">
       <input type="text" placeholder="Enter City Name" spellcheck="false">
       <button>
-        <img src="images/search-interface-symbol.png">
+        <img src="/fun little program/weather-app-customized/images/search-interface-symbol.png"  class="button-s-icon">
       </button>
     </div>
 
     <!-- weather information -->
-    <div class="weather-info">
-      <img src="images/stars cloud.png" class="weather-icon">
+    <div class="weather-info" id="weather-details">
+      <img src="/fun little program/weather-app-customized/images/stars cloud.png" class="weather-icon">
           
     <!-- involid city name -->
     <div class="error">
-      <p>Invalid City Name</p>
+      <p class="error-message">Invalid City Name</p>
     </div>
-    <!-- involid city name -->
-
 
       <p>
         <h1 class="front-tital" style="font-size: 40px;">
@@ -34,29 +32,32 @@
         </h1>
       </p>
       <h1 class="temp">22°c</h1>
-      <h2 class="city">New York</h2>
+      <h2 class="city"></h2>
       <div class="details">
         <div class="col">
-          <img src="images/humidity (1).png">
+          <img src="/fun little program/weather-app-customized/images/humidity (1).png">
           <div>
-            <p class="humidity">50%</p>
+            <p class="humidity"></p>
             <p>Humidity</p>
           </div>
         </div>
 
+        
         <div class="col">
-          <img src="images/wind (1).png">
+          <img src="/fun little program/weather-app-customized/images/wind (1).png">
           <div>
             <p class="wind">15 Km/h</p>
             <p>Wind Speed</p>
           </div>
-        </div>
+        </div> 
       </div>
-
     </div>
   </div>
- 
-
+  <div class="image-container">
+    <input type="file" id="imageInput" accept="image/*" style="display: none;">
+    <button onclick="document.getElementById('imageInput').click()">Choose Image</button>
+    <div class="image-box" id="imageBox"></div>
+  </div>
   <script src="weather-app-script.js"></script>
 </body>
 </html>
